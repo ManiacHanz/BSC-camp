@@ -1,0 +1,27 @@
+{
+  "name": "upgradable-smart-contract-practise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@openzeppelin/hardhat-upgrades": "^1.22.1",
+    "ethers": "^5.4.0",
+    "hardhat": "^2.13.0"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:bscTestnet": "hardhat run --network bscTestnet scripts/deploy_upgradeable_pricefeedtracker.js",
+    "deploy:upgrade": "hardhat run --network bscTestnet scripts/upgrade_pricefeedtracker.js",
+    "console:bscTestnet": "hardhat console --network bscTestnet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@openzeppelin/contracts-upgradeable": "^4.8.2",
+    "dotenv": "^16.0.3"
+  }
+}
